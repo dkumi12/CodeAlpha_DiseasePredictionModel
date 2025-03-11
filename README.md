@@ -5,8 +5,8 @@ This repository contains a machine learning model to predict asthma severity bas
 
 ## Dataset
 The model was trained using two versions of asthma-related datasets:
-1. `AsthmaDiseasePrediction.csv` - Original dataset containing essential patient features.
-2. `Enhanced_AsthmaDiseasePrediction.csv` - Enhanced dataset with additional features such as:
+1. `AsthmaDiseasePrediction.csv` - Original dataset containing essential patient features. link (https://drive.google.com/file/d/1cYzT1k3EyIrzPUiOfrWRceBhtIzVEiRB/view?usp=drive_link)
+2. `Enhanced_AsthmaDiseasePrediction.csv` - Enhanced dataset with additional features such as: link (https://drive.google.com/file/d/14z4d9nIOFKt-lT_vfglo444EXnljjW9V/view?usp=drive_link)
    - Pollen count
    - Air quality index
    - Exercise habits
