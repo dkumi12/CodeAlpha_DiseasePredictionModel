@@ -1,88 +1,88 @@
-# ✍️ Handwritten Character Recognition Model
+# 🫁 Asthma Severity Prediction Model
 
-This project implements a **Convolutional Neural Network (CNN)** to recognize **handwritten characters**: digits (0–9), uppercase (A–Z), and lowercase letters (a–z). It includes a **Streamlit web app** for real-time predictions using uploaded image files.
+This project uses a **Logistic Regression** model to predict the **severity of asthma** in patients based on various health-related features. The model classifies patients into different severity levels to support early intervention and better treatment decisions.
 
-This project was developed during my internship with **CodeAlpha**.
+## 📊 Dataset  
+The dataset includes anonymized medical records with features such as:
 
----
+- Age  
+- Gender  
+- Smoking History  
+- Air Pollution Index  
+- Genetic Risk  
+- Shortness of Breath  
+- Coughing Frequency  
+- Wheezing Intensity  
+- Chest Tightness  
+- Severity Level (Target Variable: Mild, Moderate, Severe)
 
-## 📊 Dataset
-
-- **Size**: 37,995 grayscale images  
-- **Image Dimensions**: 28x28 pixels  
-- **Classes**: 62 (0–9, A–Z, a–z)  
-- **Metadata**: `english.csv` maps image filenames to labels
-
----
-
-## 🧠 Model
-
-- **Architecture**: Convolutional Neural Network (CNN)  
-- **Libraries**: TensorFlow, Keras  
-- **Accuracy**: High performance on test data (details in training logs)
+> *Note: Please ensure that the dataset is cleaned and preprocessed before training.*
 
 ---
 
 ## 🛠️ Features
 
-- Trains a CNN for 62-class classification  
-- Preprocessing with grayscale normalization  
-- Real-time predictions via a Streamlit web app  
-- Confidence score displayed for each prediction  
-- Clean UI for image uploads and results
+- Logistic Regression classification  
+- Data cleaning and preprocessing  
+- Feature encoding and scaling  
+- Model evaluation (Accuracy, Confusion Matrix)  
+- Exported trained model using `joblib`
 
 ---
 
-## 🔧 Installation
+## 🧪 Steps
 
-### 1. Clone the Repository
+1. **Data Preprocessing**  
+   - Handle missing values  
+   - Encode categorical variables  
+   - Normalize/scale numerical features  
 
-```bash
-git clone https://github.com/dkumi12/CodeAlpha_HandwrittenRecognitionModel.git
-cd CodeAlpha_HandwrittenRecognitionModel
-```
+2. **Model Training**  
+   - Train a Logistic Regression model  
+   - Evaluate performance using test data  
 
-### 2. Install Requirements
+3. **Model Evaluation**  
+   - Accuracy Score  
+   - Confusion Matrix  
+   - Classification Report  
+
+4. **Model Deployment (Optional)**  
+   - Save trained model using `joblib`  
+   - Ready for integration into a web app or API
+
+---
+
+## 📦 Requirements
+
+Install the required libraries with:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Download Dataset
+---
 
-Download from [Google Drive](https://drive.google.com/drive/folders/1IeUA5T60VL9dx7b1QQCNKGGt3uFA1Ej9?usp=drive_link) and extract into the root folder as `Images/`.
+## ▶️ Run the Model
+
+```bash
+python asthma_severity_prediction.py
+```
+
+Make sure your dataset is located correctly and the script points to the right file path.
 
 ---
 
-## ▶️ Usage
+## 🚀 Future Improvements
 
-### 🔁 Train the Model
-
-```bash
-python train.py
-```
-
-### 🌐 Run the Web App
-
-```bash
-streamlit run app.py
-```
-
-Open your browser at `http://localhost:8501` and upload an image to get a prediction!
+- Add support for multiclass classification using other models like Random Forest or SVM  
+- Deploy as a web app using Streamlit or Flask  
+- Add real-time input prediction form
 
 ---
 
-## 📁 Project Structure
+## 🤝 Contribution
 
-```
-CodeAlpha_HandwrittenRecognitionModel/
-├── app.py                    # Streamlit app
-├── train.py                  # Model training
-├── requirements.txt
-├── english.csv               # Label metadata
-├── model/                    # Trained model and label binarizer
-└── Images/                   # Training data (external)
-```
+Feel free to fork the repo and improve the model or UI. Contributions are welcome!
 
 ---
 
